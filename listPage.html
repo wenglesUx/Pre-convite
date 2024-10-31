@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de convidados</title>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+ 
+
+
+  <h3>Lista de Confirmados</h3>
+  <div class="guestItemsConfirm"></div>
+  <ul id="attendanceList"></ul>
+
+  <script src="app.js"></script>
+  <script>
+    // Recuperar e exibir nomes salvos no Firestore
+async function fetchConfirmedGuests() {
+  try {
+    const snapshot = await db.collection("attendees").get();
+    snapshot.forEach(doc => {
+      const namesArray = doc.data().names || [];
+      namesArray.forEach(name => addNameToList(name));
+    });
+  } catch (error) {
+    console.error("Erro ao buscar nomes:", error);
+  }
+}
+
+// Função para adicionar nomes na lista do HTML
+function addNameToList(name) {
+  const attendanceList = document.getElementById("attendanceList");
+  const listItem = document.createElement("li");
+  listItem.textContent = name;
+  attendanceList.appendChild(listItem);
+}
+
+// Carrega os nomes confirmados ao carregar a página
+window.addEventListener("DOMContentLoaded", fetchConfirmedGuests);
+  </script>
+</body>
+</html>

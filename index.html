@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmação de Presença</title>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+  <h2>Confirme sua Presença</h2>
+  <form id="confirmationForm">
+    <input type="text" id="name-guest" placeholder="Digite seu nome" required>
+    <button type="button" id="add-form-value">Adicionar Nome</button>
+  </form>
+
+  <button id="submitAll">Enviar Todos os Nomes</button>
+
+  <a href="/listPage.html" target="_blank">lista de convidados</a>
+
+<h3>Lista de Confirmados</h3>
+  <div class="guestItemsConfirm"></div>
+  <!-- <ul id="attendanceList"></ul> -->
+
+  <script src="app.js"></script>
+</body>
+</html>
