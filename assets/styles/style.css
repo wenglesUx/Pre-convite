@@ -1,0 +1,353 @@
+:root{
+    --main-color:#b7687b;
+    --second-color:#C7978D
+}
+body{
+    background-color: #f8f0ed;
+}
+
+.header-container{
+    width:100vw;
+    height: 100vh;
+}
+.banner{
+    height: 100%;
+    width:100%;
+}
+img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+
+}
+#vers-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heart-space{
+    height:7rem;
+    width: 7rem;
+
+}
+.section-text-area{
+    color: #9b5c39;
+}
+#vers-main::before{
+    content: '';
+    width:8rem;
+    height:3px;
+    background-color: #9b5c39;
+    display: block;
+    border-radius: 15px;
+    opacity:0.4
+}
+#vers-main::after{
+    content: '';
+    width:8rem;
+    height:3px;
+    background-color: #9b5c39;
+    display: block;
+    border-radius: 15px;
+    opacity:0.4
+}
+.button-area{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.buttons-interact .button-content{
+    height:5rem;
+    width:5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border:5px solid transparent;
+}
+
+.buttons-interact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.confirm-list{
+    animation: rotate-border 2.5s ease-in-out infinite !important;  
+}
+.location-button{
+    box-shadow: -2px 2px 4px rgba(0,0,0,0.4);
+}
+.button-content::before{
+    /* content:'';
+    background-color: red;
+    height:110%;
+    width:160%;
+    display: block;
+    z-index: -1 !important;
+    border-radius: 50%; */
+}
+
+/* main-section
+ */
+ .section-text-area h4{
+    color:#9b5c39
+ }
+ .box-text{
+    
+ }
+ .section-main-text p{
+    text-align: center;
+    width:65%;
+    color:#9b5c39
+ }
+ .back-img {
+    height:50rem;
+    
+ }
+ .left-image{
+    transform:scaleX(-1);
+    left:0;
+ }
+ .right-image{
+    /* transform:scaleX(-1); */
+    right: 0;
+  }
+.back-images-container{
+    height: 400px;
+    width:100%;
+    
+
+  }
+  .main-text{
+    top:0;
+    width:100%;
+    color:var(--second-color);
+    font-family: 'miama' !important;
+    font-size: 6rem;
+
+  }
+  .main-text-content{
+    line-height: 5px;
+  }
+  .main-text-content h1{
+    font-size: 8rem !important;
+    line-height: 100px;
+    text-shadow: 2px 5px 5px rgba(0,0,0,0.2);
+  }
+  .text-area-banner{
+    height:100%;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+  }
+  #typed-text{
+    font-family: 'italiana';
+    font-weight: lighter;
+    color:#ffffff;
+    z-index: 99;
+    font-size: 10rem;
+    text-shadow: 2px 5px 5px rgba(0,0,0,0.4);
+  }
+ p{
+    font-family: 'poppins'
+  }
+  /* date content */
+  .date-content{
+    font-family: 'Julius Sans One';
+    color:var(--main-color)
+  }
+  .date-content hr{
+    height:5rem;
+    width:3px;
+    background-color: red;
+    margin: 0 1rem;
+  }
+  #messager-for-user{
+    animation: showtext 7s linear infinite;
+  }
+  .message-user #icon{
+    height:1.3rem;
+    width:1.3rem;
+  }
+  /* edição de modais */
+  #confirmationForm input{
+    width:70%;
+    padding: 0.5rem;
+    border-radius:5px;
+    border: none;
+    outline: none;
+    box-shadow: 2px 5px 5px rgba(0,0,0,0.4);
+  }
+  #confirmationForm button{
+    border:none;
+    background-color: #9b5c39;
+    border-radius:5px;
+    color:white;
+    padding: 0.5rem;
+    box-shadow: 2px 4px 6px rgba(0,0,0,0.4);
+
+  }
+
+  #submitAll{
+    background-color: var(--main-color);
+    color:white;
+    border:none;
+    border-radius: 5px;
+    padding: 0.5rem;
+  }
+.form-modal{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: .5s ease-in-out;
+  }
+  .form-modal h2,
+  .form-modal h4{
+    font-family: 'Julius Sans One';
+    color:#9b5c39
+  }
+  .form-modal h2{
+    margin: 1.5rem 0 ;
+  }
+  .guestItemsConfirm{
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+  }
+  .guestItemsConfirm p{
+    background-color: #9ccf8a;
+    color: rgb(255, 255, 255);
+    padding: 0.5rem;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.4);
+   
+   
+    
+
+  }
+  #alert-msg{
+    text-align: center;
+    font-size: 12px;
+    color:#fc7b7b;
+    margin: 1.5rem 0;
+    transition: .3s linear;
+    height: 15px;
+  }
+  .modal-header{
+    display: flex;
+    justify-content: space-between
+  }
+  .modal-header .btn-animation{
+   background-color: var(--main-color);
+   color:white;
+   border:4px solid transparent;
+   padding:0.5rem;
+   border-radius: 5px;
+   animation: rotate-border 3s linear infinite;
+
+  }
+  @keyframes rotate-border {
+    0%, 100% {
+        border: 4px solid  #9b5c39; /* Borda visível */
+        transition: .3s ease-in-out !important;
+        box-shadow: -2px 2px 5px rgba(0,0,0,0.4);
+        
+      }
+      50% {
+        border: 4px solid transparent ; /* Borda invisível */
+        transition: .3s ease-in-out !important;
+        box-shadow: -1px 1px 2px rgba(0,0,0,0.4);
+      }
+  }
+
+  @keyframes showtext{
+    0%, 100% {
+      opacity: 1;
+        transition: .3s ease-in-out !important;
+    
+        
+      }
+      50% {
+        opacity:0;
+        transition: .3s ease-in-out !important;
+       
+      }
+  }
+  @media (min-width:425px) {
+      .section-text-area h4{
+        font-size:2.5rem !important
+      }
+      p{
+        font-size: 1.5rem;
+      }
+      .heart-space{
+        height: 12rem;
+        width: 12rem;
+      }
+      .main-text-content{
+        margin:2rem;
+        line-height: 60px;
+      }
+      .main-text-content h1{
+        font-size: 9rem !important;
+        line-height: 10rem;
+      }
+      .section-main-text p{
+        margin-top: 5rem;
+      }
+      .week-date,
+      #day-num,
+      .hour-info{
+        font-size:3rem !important
+      }
+      #txt{
+        font-size: 2rem !important;
+      }
+      .buttons-interact .button-content {
+        height: 8rem;
+        width: 8rem;
+      }
+      #messager-for-user{
+        font-size: 1.7rem !important;
+        color:#636363
+      }
+      .modal-header .btn-animation{
+        font-size:2rem;
+        padding:0.5rem 2rem ;
+      }
+      .modal-body p{
+        font-size: 2rem !important;
+      }
+      .form-modal h2{
+        font-size: 4rem !important;
+      }
+      #confirmationForm input{
+        width:100%;
+        
+
+      }
+      #confirmationForm{
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 2rem;
+      }
+      .form-modal #alert-msg{
+        font-size: 1.5rem !important;
+      }
+      .form-modal h4{
+        font-size: 2.5rem;
+      }
+      #submitAll{
+        font-size: 2rem;
+        padding: 0.5rem 3rem;
+      }
+  }
+  #attendanceList li{
+    list-style-type: decimal;
+  }
+  .hidden-btn{
+    opacity:0;
+  }

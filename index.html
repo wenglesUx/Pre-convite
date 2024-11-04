@@ -3,11 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <title>Confirmação de Presença</title>
+    <!-- styles -->
+
+    <link rel="stylesheet" href="/assets/bootstrap-5.3.3-dist/css/bootstrap.css">
+    <link rel="stylesheet"  href="/assets/styles/style.css">
+    <link rel="shortcut icon" href="/assets/images/layout-images/Group 13.png" type="image/x-icon">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- firebase -->
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+
+      <!-- meta tags -->
+      <meta property="og:title" content="Chá de Casa Nova Wengles & Larissa" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://cha-de-casa-novawl.netlify.app/" />
+      <meta property="og:image" content="https://scontent.fbsb16-1.fna.fbcdn.net/v/t39.30808-6/440556177_3083822235081322_5866396147453925045_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFqdH7QGXw6RJyNQtDdfvtxK5wRRg8rwBErnBFGDyvAEeADpoBanmmichKKtcqtkws90o5VQszRovSoBkdgH84J&_nc_ohc=uUndowRmyS8Q7kNvgHUPp0m&_nc_ht=scontent.fbsb16-1.fna&oh=00_AYAhF2tGNkpo6Db3DpgDVDOEpY-R0kS3g4Xojruelu6sSw&oe=66580D60" />
+      <meta property="og:description" content="Seja bem-vindo ao nosso site de convite para o chá de casa nova! Aqui, você encontrará todas as informações essenciais para o nosso evento especial. Venha explorar e descubra os detalhes do grande dia. Esperamos vê-lo em breve!">
+      <meta property="og:image:type" content="image/png" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+
+      <!-- Fontes -->
+      <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Julius+Sans+One&family=Libre+Caslon+Display&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
-<body>
-  <h2>Confirme sua Presença</h2>
+<body class="overflow-x-hidden">
+  <header>
+    <div class="header-container position-relative">
+      <div class="text-area-banner position-absolute">
+        <div id="typed-text" class="position-absolute"></div>
+      </div>
+      <div class="banner">
+        <img src="/assets/images/layout-images/45-IMG_5355.png" alt="">
+      </div>
+    </div>
+  </header>
+  <section style="background-color: #f8f0ed;" class="  container text-center">
+    <div class="section-text-area d-flex flex-column justify-content-center align-items-center gap-5">
+      <h4 class="text-center mt-5" data-aos="fade-up"
+      data-aos-duration="3200">E o grande dia esta chegando...</h4>
+      <div class="heart-space" data-aos="fade-up"
+      data-aos-duration="3000">
+        <img src="/assets/images/layout-images/purple-heart.png" alt="">
+      </div>
+      <p id="vers-main" data-aos="zoom-in-up">“ O amor é paciente, o amor é bondoso. Não inveja, não se vangloria, não se orgulha. Não maltrata, não procura seus interesses, não se ira facilmente, não guarda rancor. O amor não se alegra com a injustiça, mas se alegra com a verdade. Tudo sofre tudo crê, tudo espera, tudo suporta. “</p>
+      <p data-aos="fade-up"
+      data-aos-duration="2000">1º corintios 13 4-7</p>
+    </div>
+  </section>
+  <!-- sessão de convite -->
+  <section class="section-main-text position-relative">
+    <div class="back-images-container position-relative">
+      <div class="back-img left-image position-absolute" >
+          <img src="/assets/images/layout-images/uma-pintura-de-flores.png" alt="" data-aos="fade-up-right">
+        
+      </div>
+
+      <div class="back-img right-image position-absolute">
+        <img src="/assets/images/layout-images/uma-pintura-de-flores.png" alt="" data-aos="fade-up-right">
+    </div>
+
+    </div>
+    <div class="main-text position-relative text-center z-1 position-absolute">
+      <div class="main-text-content">
+        <h1 data-aos="fade-up"
+        data-aos-duration="3000">Larissa &</h1>
+        <h1 data-aos="fade-down"
+        data-aos-duration="3000">Wengles</h1>
+    </div>
+   
+    </div>
+    <div class="box-text w-100 d-flex justify-content-center align-items-center" data-aos="zoom-in-up">
+
+      <p class="z-1 position-relative">
+        Sua presença tornará nosso dia ainda mais especial. Por isso, convidamos você a assinar o pré-convite e confirmar sua participação neste momento tão importante
+      </p>
+    </div>
+  
+  </section>
+  <!-- sessão de confirmação -->
+  <section class="section-form position-relative text-center">
+
+    <div class="date-content d-flex w-100 justify-content-center align-items-center my-5">
+      <div class="week-date fs-3" data-aos="fade-up"
+      data-aos-duration="3000">
+        Domingo
+      </div>
+      <hr >
+      <div class="day-date d-flex justify-content-center  align-items-center flex-column" data-aos="fade-up"
+      data-aos-duration="3500">
+        <span id="txt">jan</span>
+        <span class="fs-3 fw-bold" id="day-num" >12</span>
+        <span id="txt" >2025</span>
+      </div>
+      <hr >
+      <div class="hour-info fs-3" data-aos="fade-up"
+      data-aos-duration="3800">
+        Às 16:00H
+      </div>
+    </div>
+    <div class="buttons-interact gap-5">
+      <div class="button-area">
+        <div class="button-content location-button" data-aos="fade-up"
+        data-aos-anchor-placement="top-center">
+
+          <a href="https://www.google.com/maps/place/Mans%C3%A3o+Tavares/@-15.9706321,-48.0604204,17z/data=!4m6!3m5!1s0x935a2b2e1e6ac28f:0x48d4f352f256ec76!8m2!3d-15.9706321!4d-48.0578455!16s%2Fg%2F11fj5rym3l?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
+            <img src="/assets/images/layout-images/wedding.gif" alt="">
+          </a>
+        </div>
+        <p class="mt-3" >Local da cerimônia</p>
+      </div>
+
+      <div class="button-area position-relative">
+        <div class="button-content confirm-list" data-aos="fade-up"
+        data-aos-anchor-placement="top-center">
+
+          <img src="/assets/images/layout-images/wedding-planner.gif" alt="">
+        </div>
+        <div class="bg-interact-btn"></div>
+        <p class="mt-3" >confirmar presença</p>
+      </div >
+    </div>
+    <div class="message-user d-flex justify-content-center align-items-center gap-2 ">
+      <div id="icon">
+        <img src="/assets/images/layout-images/tap.png" alt="">
+      </div>
+      <div id="messager-for-user">
+        Clique nas opções para interagir
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="img-footer">
+      <img src="/assets/images/layout-images/footer-img-edit.png" alt="">
+    </div>
+  </footer>
+  <!-- <h2>Confirme sua Presença</h2>
   <form id="confirmationForm">
     <input type="text" id="name-guest" placeholder="Digite seu nome" required>
     <button type="button" id="add-form-value">Adicionar Nome</button>
@@ -18,9 +151,166 @@
   <a href="/listPage.html" target="_blank">lista de convidados</a>
 
 <h3>Lista de Confirmados</h3>
-  <div class="guestItemsConfirm"></div>
+  <div class="guestItemsConfirm"></div> -->
+  <!-- --- -->
   <!-- <ul id="attendanceList"></ul> -->
 
-  <script src="app.js"></script>
+  
+
+
+ <!-- modais -->
+
+
+
+<!-- Modal  de alerta -->
+<div class="modal fade" id="alertmodal" tabindex="-1" aria-labelledby="alertmodalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen-xxl-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="alertmodalLabel"></h1>
+        <button type="button" class="btn-animation" data-bs-dismiss="modal" aria-label="Close" > Continuar</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-icon">
+          <img src="/assets/images/layout-images/cake.gif" alt="">
+        </div>
+          <p>  Nosso casamento será ainda mais especial com você ao nosso lado. </p>
+          <p> <strong> Pedimos apenas que, ao confirmar sua presença, esteja certo de que poderá comparecer.</strong></p> 
+          <p> Cada confirmação é importante para a organização e preparação de um dia perfeito. Agradecemos por sua compreensão e carinho!</p>
+
+        
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+<!-- modal de confirmação -->
+<div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen-xxl-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="confirmModalLabel"></h1>
+        <button type="button" class="btn-animation"  data-bs-dismiss="modal" aria-label="Close"> Continuar</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-icon">
+          <img src="/assets/images/layout-images/wedding-planner.gif" alt="">
+        </div>
+          <p>Cada pessoa que estará conosco é especial, e queremos receber todos com o cuidado que merecem.</p> 
+          <p>Ao confirmar sua presença, por favor, adicione também o nome dos acompanhantes que estarão ao seu lado.</p>
+          <p>Assim, conseguiremos garantir que todos se sintam acolhidos e bem-vindos neste momento tão importante!</p>
+          
+          <p><strong>Após o recebimento deste convite, aguardamos a confirmação de sua presença em até 2 dias. Caso não haja resposta nesse período, entenderemos que você não poderá comparecer 😊 </strong></p>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- modal de formulario -->
+<div class="modal fade" id="formmodal" tabindex="-1" aria-labelledby="formmodalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen-xxl-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 hidden-btn" id="formmodalLabel" > <a href="/listPage.html" target="_blank">Convidados adicionados</a></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body form-modal">
+
+          <h2 class="text-center">Confirme sua Presença</h2>
+          <form id="confirmationForm" class="w-100">
+            <input type="text" id="name-guest" placeholder="Digite seu nome" required>
+            <button type="button" id="add-form-value">Adicionar Nome</button>
+          </form>
+          <p id="alert-msg"></p>
+    
+
+           
+
+          <h4>Convidados Adicionados</h4>
+          <div class="guestItemsConfirm"></div> 
+
+          <button id="submitAll" class="btn-animation" >Confirmar Presença</button>
+
+            <!-- <ul id="attendanceList"></ul>  -->
+      </div>
+      
+    </div>
+  </div>
+</div>
+ <!-- ----------------------- -->
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    var typed = new Typed("#typed-text", {
+      strings: ["Pré Convite"],
+      typeSpeed: 150,          // Velocidade de digitação
+      backSpeed: 25,          // Velocidade ao apagar
+      backDelay: 1000,        // Atraso antes de apagar
+      startDelay: 500,        // Atraso antes de começar
+      loop: false,             // Loopar a animação
+      showCursor: false       // Remove o cursor piscante
+    });
+  </script>
+   <script>
+    var typed = new Typed("#alert-msg", {
+      strings: ["Para remover um nome ja adicionado basta clicar em cima dele","Se possivel optar pelo nome inteiro do convidado","Não se esqueça de clicar no botão ( Confirmar Presença ) ao finalizar."],
+      typeSpeed: 0.1,          // Velocidade de digitação
+      backSpeed: 0.1,          // Velocidade ao apagar
+      backDelay: 5000,        // Atraso antes de apagar
+      startDelay: 0.1,        // Atraso antes de começar
+      loop: true,             // Loopar a animação
+      showCursor: false       // Remove o cursor piscante
+    });
+  </script>
+  
+  
+  
+  <!-- <script>
+    // Função para verificar se o elemento está na viewport
+    function isInViewport(element) {
+      const rect = element.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+  
+    // Função para iniciar a animação Typed.js
+    function startTypedAnimation() {
+      new Typed("#typed-text", {
+        strings: ["Pré convite"],
+        typeSpeed: 100,
+        backSpeed: 50,
+        backDelay: 1500,
+        startDelay: 300,
+        loop: false,
+        showCursor: false,
+      
+        
+      });
+    }
+  
+    // Evento de rolagem para verificar quando o elemento entra na viewport
+    let hasTypedStarted = false; // Variável para garantir que a animação só inicie uma vez
+    window.addEventListener("scroll", function () {
+      const typedTextElement = document.getElementById("typed-text");
+      if (isInViewport(typedTextElement) && !hasTypedStarted) {
+        startTypedAnimation();
+        hasTypedStarted = true; // Define como true para evitar reiniciar a animação
+      }
+    });
+  </script> -->
+
+  <script src="/assets/bootstrap-5.3.3-dist/js/bootstrap.js"></script>
+  <script src="/assets/script/app.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
