@@ -2,6 +2,15 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+     <!-- meta tags -->
+     <meta property="og:title" content="Pré Convite W & L confirme sua presença" />
+     <meta property="og:type" content="website" />
+     <meta property="og:url" content="https://cha-de-casa-novawl.netlify.app/" />
+     <meta property="og:image" content="https://drive.google.com/file/d/1zTCmY_ryodCoeOiLiJw604FuJx-wAfVC/view?usp=sharing" />
+     <meta property="og:description" content="Seja bem-vindo ao pré convite da cerimônia do nosso casamento! Aqui, você encontrará todas as informações essenciais para o nosso evento especial. Venha explorar e descubra os detalhes do grande dia. Esperamos vê-lo em breve!">
+     <meta property="og:image:type" content="image/png" />
+     <meta property="og:image:width" content="1200" />
+     <meta property="og:image:height" content="630" />
     <title>Confirmação de Presença</title>
     <!-- styles -->
 
@@ -15,15 +24,7 @@
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
 
-      <!-- meta tags -->
-      <meta property="og:title" content="Chá de Casa Nova Wengles & Larissa" />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://cha-de-casa-novawl.netlify.app/" />
-      <meta property="og:image" content="https://scontent.fbsb16-1.fna.fbcdn.net/v/t39.30808-6/440556177_3083822235081322_5866396147453925045_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFqdH7QGXw6RJyNQtDdfvtxK5wRRg8rwBErnBFGDyvAEeADpoBanmmichKKtcqtkws90o5VQszRovSoBkdgH84J&_nc_ohc=uUndowRmyS8Q7kNvgHUPp0m&_nc_ht=scontent.fbsb16-1.fna&oh=00_AYAhF2tGNkpo6Db3DpgDVDOEpY-R0kS3g4Xojruelu6sSw&oe=66580D60" />
-      <meta property="og:description" content="Seja bem-vindo ao nosso site de convite para o chá de casa nova! Aqui, você encontrará todas as informações essenciais para o nosso evento especial. Venha explorar e descubra os detalhes do grande dia. Esperamos vê-lo em breve!">
-      <meta property="og:image:type" content="image/png" />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
+     
 
       <!-- Fontes -->
       <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Julius+Sans+One&family=Libre+Caslon+Display&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -33,7 +34,23 @@
   <header>
     <div class="header-container position-relative">
       <div class="text-area-banner position-absolute">
-        <div id="typed-text" class="position-absolute"></div>
+        <div id="typed-text" class="position-absolute">
+          <div class="text-animation">
+            <span>P</span>
+            <span>r</span>
+            <span>é</span>
+            <span> </span>
+            <span>C</span>
+            <span>o</span>
+            <span>n</span>
+            <span>v</span>
+            <span>i</span>
+            <span>t</span>
+            <span>e</span>
+        </div>
+        
+
+        </div>
       </div>
       <div class="banner">
         <img src="/assets/images/layout-images/45-IMG_5355.png" alt="">
@@ -135,7 +152,11 @@
       </div>
     </div>
   </section>
-  <footer>
+  <footer class=" position-relative">
+      <div class="footer-img-flower">
+          
+      </div>
+    <div class="copyright">Desenvolvido por' <span>Wengles Monteiro</span></div>
     <div class="img-footer">
       <img src="/assets/images/layout-images/footer-img-edit.png" alt="">
     </div>
@@ -228,11 +249,13 @@
     
 
            
+          <div class="guest-section" >
 
-          <h4>Convidados Adicionados</h4>
-          <div class="guestItemsConfirm"></div> 
-
-          <button id="submitAll" class="btn-animation" >Confirmar Presença</button>
+            <h4>Convidados Adicionados</h4>
+            <div class="guestItemsConfirm "></div> 
+            
+            <button id="submitAll" class="btn-animation" >Confirmar Presença</button>
+          </div>
 
             <!-- <ul id="attendanceList"></ul>  -->
       </div>
@@ -240,10 +263,89 @@
     </div>
   </div>
 </div>
+
+<!-- modal de reposta de confirmação -->
+  <div class="modal fade" id="guestresponseModal" tabindex="-1" aria-labelledby="guestresponseModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen-xxl-down">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="guestresponseModalLabel"></h1>
+          <button type="button" class="btn-animation"  data-bs-dismiss="modal" aria-label="Close"> Continuar</button>
+        </div>
+        <div class="modal-body subModal-body">
+          <h1>Presença confirmada com sucesso!</h1>
+          <div class="modal-icon">
+            <img src="/assets/images/layout-images/wedding (1).gif" alt="">
+          </div>
+            <h3>
+              Obrigado por aceitar estar ao nosso lado nesse momento único. Sua presença será um presente e fará desse dia uma lembrança inesquecível. Nos vemos em breve!
+            </h3>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- modal de resposta com erro de envio -->
+ 
+  <div class="modal fade" id="guestErrorModal" tabindex="-1" aria-labelledby="guestErrorModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen-xxl-down">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="guestErrorModalLabel"></h1>
+          <button type="button" class="btn-animation"  data-bs-dismiss="modal" aria-label="Close"> Continuar</button>
+        </div>
+        <div class="modal-body subModal-body">
+          <h1>Erro inesperado</h1>
+          <div class="modal-icon">
+            <img src="/assets/images/layout-images/notification.gif" alt="">
+          </div>
+            <h3>
+              Erro ao salvar nomes na lista de presença, se o erro persistir entre em contato conosco através do wathsapp
+            </h3>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- modal para erro de duplicação -->
+  <div class="modal fade" id="submitErrorModal" tabindex="-1" aria-labelledby="submitErrorModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="submitErrorModalLabel"></h1>
+          <button type="button" class="btn-animation"  data-bs-dismiss="modal" aria-label="Close"> Continuar</button>
+        </div>
+        <div class="modal-body subModal-body">
+          <h1>Nomes ja enviados!</h1>
+          <div class="modal-icon">
+            <img src="/assets/images/layout-images/notification.gif" alt="">
+          </div>
+            <h3>
+              Por segurança a função de envio foi desativa, mas não se preocupe os nomes dos convidados que voce digitou ja foram confirmadas! <br>
+              caso tenha esquecido de alguem e queira adicionar basta recarregar a pagina e repetir o preocesso <br>
+              mas lembre-se digite apenas o nome que do convidado que ficou de fora da lista 
+            </h3>
+        </div>
+        
+      </div>
+    </div>
+  </div>
  <!-- ----------------------- -->
+ <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#guestresponseModal">
+  Launch demo modal
+</button>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#guestErrorModal">
+  Launch demo modal
+</button>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#submitErrorModal">
+  Launch demo modal
+</button> -->
+
 
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script>
+  <!-- <script>
     var typed = new Typed("#typed-text", {
       strings: ["Pré Convite"],
       typeSpeed: 150,          // Velocidade de digitação
@@ -253,14 +355,15 @@
       loop: false,             // Loopar a animação
       showCursor: false       // Remove o cursor piscante
     });
-  </script>
+  </script> -->
    <script>
     var typed = new Typed("#alert-msg", {
-      strings: ["Para remover um nome ja adicionado basta clicar em cima dele","Se possivel optar pelo nome inteiro do convidado","Não se esqueça de clicar no botão ( Confirmar Presença ) ao finalizar."],
+      strings: ["Para remover um nome ja adicionado basta clicar em cima dele","Se possivel optar pelo nome inteiro do convidado","Não se esqueça de clicar no botão ( Confirmar Presença ) ao finalizar.","Confirme todos os nomes digitados antes de enviar","Voce que recebeu o covite digite o nome de todos os que irão te acompanhar","Digite o nome e clique em (ADICIONAR NOME)", "Depois do nome adicionado a presença so e confirmada após clicar no botão (CONFIRMA PRESENÇA)"],
       typeSpeed: 0.1,          // Velocidade de digitação
       backSpeed: 0.1,          // Velocidade ao apagar
       backDelay: 5000,        // Atraso antes de apagar
       startDelay: 0.1,        // Atraso antes de começar
+      shuffle: true,  
       loop: true,             // Loopar a animação
       showCursor: false       // Remove o cursor piscante
     });
@@ -308,6 +411,7 @@
 
   <script src="/assets/bootstrap-5.3.3-dist/js/bootstrap.js"></script>
   <script src="/assets/script/app.js"></script>
+  <script src="/assets/script/script.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
